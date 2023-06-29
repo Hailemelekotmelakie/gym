@@ -1,0 +1,39 @@
+ @import url('https://fonts.googleapis.com/css?family=Rubik');
+
+ :root {
+   --black-color: #373535;
+   --white-color: #ffffff;
+   --button-color: #293df0da;
+   --shadow-color: #c1c1c1;
+   --border-color: #cccccc;
+
+   color-scheme: light;
+ }
+
+
+ .dark {
+   --black-color: #ffffff;
+   --white-color: #3d3a3a;
+   --button-color: #9e9e9e;
+   --shadow-color: #000000;
+   --border-color: #757272;
+
+   color-scheme: dark;
+ }
+
+ * {
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
+ }
+
+ body {
+   color: var(--black-color);
+   background-color: var(--white-color);
+   font-family: 'Rubik', -apple-system, BlinkMacSystemFont,
+     "Segoe UI", "Roboto", "Oxygen",
+     "Ubuntu", "Cantarell", "Fira Sans",
+     "Droid Sans", "Helvetica Neue", sans-serif;
+   transition: all 0.5s ease-in-out;
+   margin: 0 0;
+ }

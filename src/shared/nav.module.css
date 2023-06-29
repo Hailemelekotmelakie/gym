@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: lightgray
+    /* var(--white-color); */
+}
+
+.linksContainer {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.links {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 800;
+  color: var(--button-color);
+}
+
+.links:active {
+  transform: translateY(2px);
+}
+
+.navSelect {
+  outline: none;
+  border-radius: 4px;
+  border: thin solid var(--black-color);
+  font-size: medium;
+  font-weight: 600;
+  padding: 7px;
+  background-color: transparent;
+  color: var(--button-color);
+}
+
+.navSelect:active {
+  transform: translateY(2px);
+}
+
+/* 
+      Checkbox start
+      */
+.checkbox:checked+.label .ball {
+  transform: translateX(20px);
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  width: 38px;
+  height: 15px;
+  background: var(--button-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background: var(--white-color);
+  border: 3px solid var(--button-color);
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  display: flex;
+  align-self: center;
+}
+
+/* 
+      Checkbox end
+      */
+
+/*  --------------------------------------------------------Tab--------------------------------------------------- */
+@media (min-width: 751px) and (max-width: 1111px) {
+  .link {
+    padding: 7px;
+    text-decoration: none;
+  }
+}
+
+/*  --------------------------------------------------------Mobile------------------------------------------------ */
+@media (max-width: 750px) {
+  .container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    padding: 7px 10px 7px 50px
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgb(213, 180, 136);
+    align-items: center;
+    justify-content: flex-end;
+    width: max-content;
+    cursor: pointer;
+    padding: 10px;
+    align-self: flex-end;
+    border-radius: 5px;
+    z-index: 9;
+    animation: all 1s;
+  }
+
+  .menu:hover,
+  .menu:active,
+  .menu:focus {
+    background-color: rgb(229, 173, 100);
+  }
+
+  .menu:active {
+    transform: translateY(2px);
+  }
+
+  .menuLine {
+    background-color: black;
+    height: 3.5px;
+    width: 29px;
+    border-radius: 10px;
+  }
+
+  .upline {
+    background-color: black;
+    height: 3.5px;
+    width: 29px;
+    border-radius: 10px;
+    margin-top: 4px;
+    transform: rotate(45deg);
+  }
+
+  .downline {
+    background-color: black;
+    height: 3.5px;
+    width: 29px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    transform: rotate(-45deg);
+  }
+
+  .linksContainer {
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: baseline;
+    background-color: aliceblue;
+    right: 0%;
+  }
+
+  .link {
+    padding: 5px;
+    text-decoration: none;
+  }
+}

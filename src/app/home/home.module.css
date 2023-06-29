@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.fitestImage {
+    background-image: url('/gym.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: -2;
+}
+
+.theFitest {
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    gap: 10px;
+    z-index: -19;
+}
+
+.theFitestLeft {
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(315deg, #fca61f 0%, #2b02f7 100%); */
+}
+
+.theFitestHeader {
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    font-size: 90px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(129, 116, 6);
+    color: linear-gradient(315deg, #fca61f 0%, #2b02f7 100%);
+}
+
+.theFitestRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowerw {
+    position: relative
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    filter: blur(200px);
+}
