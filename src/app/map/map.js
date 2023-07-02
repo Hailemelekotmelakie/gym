@@ -23,31 +23,38 @@ export default function Map() {
 
   return (
     <>
-      <MapContainer
+      <div
+        id="map"
         style={{
-          width: "100%",
-          height: 500,
-          borderRadius: "30px",
-          border: "10px solid #b5b9f1",
-          backgroundColor: "red",
-          fillColor: "red",
+          padding: "10px 80px",
         }}
-        center={[11, 37]}
-        zoom={6}
       >
-        <TileLayer
-          attribution='&amp; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {markers.map((val, i) => {
-          return (
-            <Marker
-              eventHandlers={{
-                mouseover: (event) => event.target.openPopup(),
-              }}
-              key={i}
-              icon={L.divIcon({
-                html: `<div style='    
+        <h3>Track out locations and branches</h3>
+        <MapContainer
+          style={{
+            width: "100%",
+            height: 350,
+            borderRadius: "10px",
+            border: "3px solid var(--green-color2)",
+            backgroundColor: "green",
+            fillColor: "green",
+          }}
+          center={[11, 37]}
+          zoom={6}
+        >
+          <TileLayer
+            attribution='&amp; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {markers.map((val, i) => {
+            return (
+              <Marker
+                eventHandlers={{
+                  mouseover: (event) => event.target.openPopup(),
+                }}
+                key={i}
+                icon={L.divIcon({
+                  html: `<div style='    
                 font-size: 12px;
                 font-weight:600;
                 color: black;
@@ -57,18 +64,19 @@ export default function Map() {
                 border-radius:5px;
                 width:min-content
                 '> ${val.country} </div>`,
-              })}
-              position={[val.lati, val.long]}
-            >
-              <Popup>
-                {val.country}
-                <br />
-                {val.adress}
-              </Popup>
-            </Marker>
-          );
-        })}
-      </MapContainer>
+                })}
+                position={[val.lati, val.long]}
+              >
+                <Popup>
+                  {val.country}
+                  <br />
+                  {val.adress}
+                </Popup>
+              </Marker>
+            );
+          })}
+        </MapContainer>
+      </div>
     </>
   );
 }

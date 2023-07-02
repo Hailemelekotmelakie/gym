@@ -1,0 +1,132 @@
+.modal {
+    position: fixed !important;
+    /* Stay in place */
+    z-index: 999;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    outline: none;
+    /* border: 1px solid rgb(29, 230, 29); */
+    border-radius: 5px;
+    width: 70%;
+    box-shadow: 10px 8px 80px rgb(0, 0, 0);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 1s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: var(--green-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--green-color);
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.modalHeader {
+    padding: 10px 20px 0px 20px;
+    background-color: transparent;
+    color: var(--green-color);
+    border-bottom: 2px solid var(--green-color);
+    text-align: center;
+}
+
+.modalBody {
+    padding: 16px 60px 16px 60px;
+}
+
+.textInModal {
+    font-size: 17px;
+    margin: 5px;
+}
+
+.needWebsite {
+    font-size: 20px;
+    padding: 30px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 880px) {
+    .modal {
+        padding-top: 70px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-header {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-body {
+        padding: 10px;
+    }
+
+    .textInModal {
+        font-size: 13px;
+    }
+
+    .needWebsite {
+        padding-top: 5px;
+        font-size: 9px;
+    }
+}

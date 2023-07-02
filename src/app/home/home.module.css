@@ -1,57 +1,184 @@
 .container {
     display: flex;
-    flex-direction: column;
-}
-
-.fitestImage {
-    background-image: url('/gym.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    z-index: -2;
-}
-
-.theFitest {
-    display: flex;
     flex-direction: row;
-    padding: 100px;
+    padding: 30px 80px;
+    align-items: center;
     gap: 10px;
-    z-index: -19;
 }
 
-.theFitestLeft {
-    display: flex;
-    flex-direction: column;
-    /* background: linear-gradient(315deg, #fca61f 0%, #2b02f7 100%); */
-}
-
-.theFitestHeader {
-    text-align: center;
-    text-transform: uppercase;
-    transition: 1s;
-    font-size: 90px;
-    font-weight: bolder;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: rgb(129, 116, 6);
-    color: linear-gradient(315deg, #fca61f 0%, #2b02f7 100%);
-}
-
-.theFitestRight {
-    display: flex;
-    flex-direction: column;
-}
-
-.lowerw {
-    position: relative
-}
-
-.backgroundImage {
+.backgroundAbstract {
+    z-index: -1;
+    height: 100%;
+    width: 140vh;
+    filter: blur(200px);
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: -2;
-    filter: blur(200px);
+}
+
+.labelsContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    gap: 30px;
+}
+
+.outlineText {
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 47px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--green-color);
+}
+
+.boldHeader {
+    text-transform: uppercase;
+    transition: 1s;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(0deg, var(--green-color) 0%, #2b02f7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: var(--green-color);
+}
+
+.labelsmallestContainer {
+    display: flex;
+    font-size: 20px;
+    line-height: 1.5rem;
+    word-spacing: 1px;
+    text-align: justify;
+    color: var(--black-color2);
+}
+
+.counters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.count {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--green-color);
+    transition: 0.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.countLabel {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--black-color);
+}
+
+.imageContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.dembellImage {
+    width: 90%;
+    height: auto;
+    border-bottom-right-radius: 30%;
+    transform: translateX(40px);
+}
+
+.p {
+    text-align: center;
+    background: linear-gradient(95deg, var(--green-color), gold, #d2ff07, gold, var(--green-color));
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: var(--green-color2);
+    font-weight: 700;
+    width: max-content;
+    align-self: center;
+}
+
+
+
+/*  --------------------------------------------------------Tab--------------------------------------------------- */
+@media (min-width: 751px) and (max-width: 1111px) {
+    .container {
+        padding: 10px 30px;
+        flex-direction: column;
+    }
+
+    .dembellImage {
+        width: 80%;
+        border-bottom-right-radius: 30%;
+    }
+
+    .link {
+        padding: 7px;
+        text-decoration: none;
+    }
+
+    .outlineText {
+        font-size: 40px;
+    }
+}
+
+/*  --------------------------------------------------------Mobile------------------------------------------------ */
+@media (max-width: 750px) {
+    .container {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .labelsContainer {
+        gap: 10px;
+    }
+
+    .outlineText {
+        font-size: 30px;
+    }
+
+    .labelsmallestContainer {
+        font-size: 13px;
+    }
+
+    .counterContainer {
+        gap: 5px;
+    }
+
+    .count {
+        font-size: 17px;
+        font-weight: bold;
+        color: var(--green-color2);
+        transition: 0.5;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .countLabel {
+        font-size: 10px;
+        font-weight: 900;
+        color: var(--black-color);
+    }
+
+    .imageContainer {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .dembellImage {
+        width: 75%;
+        height: auto;
+        border-bottom-right-radius: 30%;
+    }
 }

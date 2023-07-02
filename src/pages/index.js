@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import HomeRender from "@/app/home/home";
+import Subscription from "@/app/subscription/subscription";
 import AboutRender from "@/app/about/about";
 
 import Head from "next/head";
@@ -17,8 +18,9 @@ export default function index() {
         <link rel="icon" href="/nexst.svg" />
       </Head>
       <HomeRender />
-      <MapWithNoSSR />
+      <Subscription />
       <AboutRender />
+      <MapWithNoSSR />
     </>
   );
 }

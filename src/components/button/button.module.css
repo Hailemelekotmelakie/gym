@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    border-radius: 50px;
+    border: thin solid var(--border-color);
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    /* background: linear-gradient(to left, var(--green-color2), var(--white-color)); */
+}
+
+.arrowRight {
+    align-self: center;
+}
+
+.button:hover>.arrowRight {
+    transition: all 0.1s ease-in-out;
+    transform: translatex(4px);
+}
+
+.button:active {
+    transition: all 0.1s ease-in-out;
+    transform: translateY(2px);
+}

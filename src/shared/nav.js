@@ -14,17 +14,20 @@ export default function Nav() {
   const navs = [
     {
       name: l.home,
+      link: "home",
     },
     {
       name: l.about,
+      link: "about",
     },
     {
       name: l.map,
+      link: "map",
     },
   ];
 
   useEffect(() => {
-    document.getElementById("head").style.right = isHeaderOn ? "200%" : "0%";
+    document.getElementById("head").style.right = isHeaderOn ? "0%" : "200%";
   }, [isHeaderOn]);
 
   useEffect(() => {
@@ -55,7 +58,7 @@ export default function Nav() {
           setHeaderOn(!isHeaderOn);
         }}
       >
-        {isHeaderOn ? (
+        {!isHeaderOn ? (
           <>
             <div className={styles.menuLine}></div>
             <div className={styles.menuLine}></div>
@@ -71,9 +74,9 @@ export default function Nav() {
 
       <div id="head" className={styles.linksContainer}>
         {navs.map((link, i) => (
-          <div className={styles.links} key={i}>
-            {link.name}
-          </div>
+          <a style={{ textDecoration: "none" }} href={`#${link.link}`} key={i}>
+            <div className={styles.links}>{link.name}</div>
+          </a>
         ))}
         <div>
           <select
@@ -89,7 +92,15 @@ export default function Nav() {
             <option value={"aw"}> አዊ </option>
           </select>
         </div>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 10,
+          }}
+        >
+          <p className={[styles.links + " " + styles.nightMode]}> Night mode</p>
           <input
             type="checkbox"
             onChange={() => {

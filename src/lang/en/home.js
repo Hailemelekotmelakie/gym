@@ -1,7 +1,9 @@
 export default {
-  name: "THE FITTEST SERVIVES",
-  email: "Hailemelkotmelakie1991@gmail.com",
-  about: "About us",
-  longText:
-    "Hello world! arch 31, 1996, and it was finally time for Bret Hart to face off against Shawn Michaels in the long anticipated Iron Man match",
+  shape: "SHAPE",
+  "YOUR IDEAL BODY": "YOUR IDEAL BODY",
+  "long description":
+    'This body shape (commonly called "ideal") describes a person with equal hip and bust measurements and a narrow waist measurement',
+  "EXPERT COACHES": "EXPERT COACHES",
+  Joined: "JOINED",
+  "SPACE FOR WORK": "SPACE FOR WORK",
 };

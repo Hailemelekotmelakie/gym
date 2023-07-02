@@ -1,22 +1,38 @@
  @import url('https://fonts.googleapis.com/css?family=Rubik');
 
  :root {
-   --black-color: #373535;
+   --black-color: #515050;
+   --black-color2: #a7a5a5;
    --white-color: #ffffff;
-   --button-color: #293df0da;
    --shadow-color: #c1c1c1;
    --border-color: #cccccc;
+   --green-color: #05c46b;
+   --green-color2: #018045;
+
+   /* Subscriptions */
+   --basic: #d81417;
+   --standard: #1184ff;
+   --premium: #dcbc04;
+
 
    color-scheme: light;
  }
 
 
  .dark {
-   --black-color: #ffffff;
+   --black-color: #e0dede;
+   --black-color2: #b4b4b4;
    --white-color: #3d3a3a;
-   --button-color: #9e9e9e;
    --shadow-color: #000000;
    --border-color: #757272;
+   --green-color: #05c46b;
+   --green-color2: #00733d;
+
+
+   /* Subscriptions */
+   --basic: #d81417;
+   --standard: #1184ff;
+   --premium: #f49513;
 
    color-scheme: dark;
  }
@@ -25,6 +41,10 @@
    box-sizing: border-box;
    padding: 0px;
    margin: 0px;
+ }
+
+ html {
+   scroll-behavior: smooth;
  }
 
  body {
@@ -36,4 +56,26 @@
      "Droid Sans", "Helvetica Neue", sans-serif;
    transition: all 0.5s ease-in-out;
    margin: 0 0;
+ }
+
+
+ /* width */
+ ::-webkit-scrollbar {
+   width: 5px;
+ }
+
+ /* Track */
+ ::-webkit-scrollbar-track {
+   border-radius: 4px;
+ }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: var(--green-color);
+   border-radius: 2px;
+ }
+
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: var(--green-color2);
  }

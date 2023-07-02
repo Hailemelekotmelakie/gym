@@ -5,8 +5,9 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: lightgray
-    /* var(--white-color); */
+  padding: 0 80px;
+  border-bottom: 1px solid rgb(179, 176, 176);
+  background: linear-gradient(to left, var(--white-color), var(--green-color2));
 }
 
 .linksContainer {
@@ -22,7 +23,7 @@
   text-decoration: none;
   font-size: large;
   font-weight: 800;
-  color: var(--button-color);
+  color: var(--green-color);
 }
 
 .links:active {
@@ -37,11 +38,15 @@
   font-weight: 600;
   padding: 7px;
   background-color: transparent;
-  color: var(--button-color);
+  color: var(--green-color);
 }
 
 .navSelect:active {
   transform: translateY(2px);
+}
+
+.nightMode {
+  display: none;
 }
 
 /* 
@@ -58,7 +63,7 @@
 .label {
   width: 38px;
   height: 15px;
-  background: var(--button-color);
+  background: var(--green-color);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -68,7 +73,7 @@
   width: 20px;
   height: 20px;
   background: var(--white-color);
-  border: 3px solid var(--button-color);
+  border: 3px solid var(--green-color);
   border-radius: 50%;
   transition: transform 0.2s linear;
   display: flex;
@@ -94,14 +99,16 @@
     top: 0;
     left: 0;
     flex-direction: column;
-    padding: 7px 10px 7px 50px
+    padding: 7px 10px 7px 50px;
+    background: transparent;
+    border: none;
   }
 
   .menu {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: rgb(213, 180, 136);
+    background-color: var(--green-color);
     align-items: center;
     justify-content: flex-end;
     width: max-content;
@@ -116,7 +123,7 @@
   .menu:hover,
   .menu:active,
   .menu:focus {
-    background-color: rgb(229, 173, 100);
+    background-color: var(--green-color2)
   }
 
   .menu:active {
@@ -124,14 +131,14 @@
   }
 
   .menuLine {
-    background-color: black;
+    background-color: var(--black-color);
     height: 3.5px;
     width: 29px;
     border-radius: 10px;
   }
 
   .upline {
-    background-color: black;
+    background-color: var(--black-color);
     height: 3.5px;
     width: 29px;
     border-radius: 10px;
@@ -140,7 +147,7 @@
   }
 
   .downline {
-    background-color: black;
+    background-color: var(--black-color);
     height: 3.5px;
     width: 29px;
     border-radius: 10px;
@@ -153,12 +160,18 @@
     top: 0;
     flex-direction: column;
     align-items: baseline;
-    background-color: aliceblue;
+    /* background-color: var(--white-color); */
+    background: linear-gradient(to left, var(--green-color2), var(--white-color));
     right: 0%;
+    transition: all 0.5s;
   }
 
   .link {
     padding: 5px;
     text-decoration: none;
+  }
+
+  .nightMode {
+    display: block;
   }
 }
