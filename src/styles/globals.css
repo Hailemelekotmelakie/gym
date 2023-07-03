@@ -1,6 +1,7 @@
  @import url('https://fonts.googleapis.com/css?family=Rubik');
 
  :root {
+   --black: #000000;
    --black-color: #515050;
    --black-color2: #a7a5a5;
    --white-color: #ffffff;
@@ -20,6 +21,7 @@
 
 
  .dark {
+   --black: #ffffff;
    --black-color: #e0dede;
    --black-color2: #b4b4b4;
    --white-color: #3d3a3a;

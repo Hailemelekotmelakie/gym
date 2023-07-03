@@ -4,6 +4,7 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import "leaflet/dist/leaflet.css";
 import { TileLayer } from "react-leaflet/TileLayer";
 import L from "leaflet";
+import style from "./map.module.css";
 
 export default function Map() {
   const markers = [
@@ -23,13 +24,10 @@ export default function Map() {
 
   return (
     <>
-      <div
-        id="map"
-        style={{
-          padding: "10px 80px",
-        }}
-      >
-        <h3>Track out locations and branches</h3>
+      <div className={style.map} id="map">
+        <p className={style.location}>
+          Find the nearest open gym houses and new branches through map
+        </p>
         <MapContainer
           style={{
             width: "100%",

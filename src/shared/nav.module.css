@@ -6,8 +6,11 @@
   left: 0;
   z-index: 9999;
   padding: 0 80px;
-  border-bottom: 1px solid rgb(179, 176, 176);
-  background: linear-gradient(to left, var(--white-color), var(--green-color2));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+
+  background-color: #f6fafa82;
+  backdrop-filter: blur(90px);
+  -webkit-backdrop-filter: blur(90px);
 }
 
 .linksContainer {
@@ -80,12 +83,14 @@
   align-self: center;
 }
 
-/* 
-      Checkbox end
-      */
+/*     Checkbox end      */
 
 /*  --------------------------------------------------------Tab--------------------------------------------------- */
 @media (min-width: 751px) and (max-width: 1111px) {
+  .container {
+    background: transparent;
+  }
+
   .link {
     padding: 7px;
     text-decoration: none;
@@ -101,6 +106,8 @@
     flex-direction: column;
     padding: 7px 10px 7px 50px;
     background: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     border: none;
   }
 

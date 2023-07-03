@@ -5,6 +5,7 @@ import Subscription from "@/app/subscription/subscription";
 import AboutRender from "@/app/about/about";
 
 import Head from "next/head";
+import Footer from "@/app/footer/footer";
 const MapWithNoSSR = dynamic(() => import("@/app/map/map"), {
   ssr: false,
 });
@@ -21,6 +22,7 @@ export default function index() {
       <Subscription />
       <AboutRender />
       <MapWithNoSSR />
+      <Footer />
     </>
   );
 }

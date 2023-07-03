@@ -1,0 +1,32 @@
+.map {
+    padding: 10px 80px;
+}
+
+.location {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    font-weight: 600;
+}
+
+/*  --------------------------------------------------------Tab------------------------------------------------ */
+@media (min-width: 751px) and (max-width: 1111px) {
+    .map {
+        padding: 10px 20px;
+    }
+
+    .location {
+        font-size: 19px;
+    }
+}
+
+/*  --------------------------------------------------------Mobile------------------------------------------------ */
+@media (max-width: 750px) {
+    .map {
+        padding: 5px 5px;
+    }
+
+    .location {
+        font-size: 17px
+    }
+}
