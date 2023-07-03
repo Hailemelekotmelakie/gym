@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "../shared/nav";
+import Nav from "../app/header/nav";
 import "../styles/globals.css";
 import { LanguageContext } from "@/useContext/context";
 

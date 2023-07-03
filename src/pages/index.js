@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import HomeRender from "@/app/home/home";
 import Subscription from "@/app/subscription/subscription";
 import AboutRender from "@/app/about/about";
-
+import Whyus from "@/app/whyus/whyus";
 import Head from "next/head";
 import Footer from "@/app/footer/footer";
 const MapWithNoSSR = dynamic(() => import("@/app/map/map"), {
@@ -20,6 +20,7 @@ export default function index() {
       </Head>
       <HomeRender />
       <Subscription />
+      <Whyus />
       <AboutRender />
       <MapWithNoSSR />
       <Footer />

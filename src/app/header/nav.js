@@ -1,6 +1,6 @@
-import Amharic from "../lang/am/navs";
-import English from "../lang/en/navs";
-import Awi from "../lang/aw/navs";
+import Amharic from "../../lang/am/navs";
+import English from "../../lang/en/navs";
+import Awi from "../../lang/aw/navs";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@/useContext/context";
 import styles from "./nav.module.css";

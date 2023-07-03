@@ -10,17 +10,8 @@ export default function About() {
   const l = language === "am" ? Amharic : language === "aw" ? Awi : English;
   return (
     <div id="about">
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-      <h1>{l.about}</h1>
-
-      {/* <Skeleton /> */}
+      <h4>{l.about}</h4>
+      <Skeleton />
     </div>
   );
 }

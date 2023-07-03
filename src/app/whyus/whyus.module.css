@@ -1,0 +1,52 @@
+.container {
+    padding: 50px 80px;
+}
+
+.reasons {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--premium);
+}
+
+.whyUs {
+    color: var(--green-color);
+    font-size: 35px;
+    font-weight: 700;
+    padding: 0px 0px 20px 0px
+}
+
+.listContainers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.lists {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 17px;
+    align-self: center;
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 30px 10px;
+    }
+
+    .whyUs {
+        font-size: 25px;
+        padding: 0px 0px 15px 0px
+    }
+
+    .listContainers {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .lists {
+        font-size: 15px;
+    }
+
+}
